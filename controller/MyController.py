@@ -87,6 +87,7 @@ if str(backHomefromBootStrapDesign)!="None":
     #controller asks updates design back to index or main
     redirectURL = "http://localhost/IT123P/index.html"
     print ('<script type="text/javascript">window.location ="' + redirectURL + '";</script>')
+    print("Petmalu")
    
    
 
