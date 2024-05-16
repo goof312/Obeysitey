@@ -7,7 +7,7 @@ import mysql.connector
 
 
 import sys
-sys.path.append("C:/xampp/htdocs/OBEYSITEY/model/")
+sys.path.append("C:/xampp/htdocs/Obeysity/Obeysity/model/")
 from MyConnection import MyConnection
 
 

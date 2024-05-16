@@ -3,7 +3,7 @@
 import mysql.connector
 
 import sys
-sys.path.append("C:/xampp/htdocs/OBEYSITEY/model/")
+sys.path.append("C:/xampp/htdocs/Obeysity/Obeysity/model/")
 
 from MyQueries import *
 
@@ -21,7 +21,7 @@ class MyView1():
         print("<center>")
         print("<h1>My Sample SEMI-MVC</h1>")
        
-        print("<form action='/OBEYSITEY/controller/MyController.py' method='post'>")
+        print("<form action='/Obeysity/Obeysity/controller/MyController.py' method='post'>")
         print("Enter name: <input type='text' name ='name'>")
         print("<input type ='submit' name ='search' value = 'SEARCH'/>")
         print("</form>")
@@ -61,7 +61,7 @@ class MyView2():
         print("<center>")
         print("<h1>My Sample SEMI-MVC</h1>")
        
-        print("<form action='/OBEYSITEY/controller/MyController.py' method='post'>")
+        print("<form action='/Obeysity/Obeysity/controller/MyController.py' method='post'>")
         print("Enter name: <input type='text' name ='name'>")
         print("<input type ='submit' name ='search' value = 'SEARCH'/>")
         print("</form>")
