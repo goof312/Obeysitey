@@ -1,8 +1,7 @@
 #!C:\Users\Admin\AppData\Local\Programs\Python\Python312\python
 
-
 print("Content-Type: text/html")
-print()
+print()     
 import cgi
 import sys
 
@@ -27,14 +26,14 @@ postedDegree=form.getvalue("degree")
 if str(getALL)!="None":
 
     #controller asks model to show all records
-    sys.path.append("C:/xampp/htdocs/IT123P/model/")
+    sys.path.append("C:/xampp/htdocs/OBEYSITEY/model/")
     from MyQueries import MyQuery1
     
     query1 = MyQuery1()
     results= query1.showAll()
     
     #controller updates the view of data obtained from the model
-    sys.path.append("C:/xampp/htdocs/IT123P/view/")
+    sys.path.append("C:/xampp/htdocs/OBEYSITEY/view/")
     from MyViews import MyView1
    
     view1=MyView1(results)
@@ -44,14 +43,14 @@ if str(getALL)!="None":
 if str(searchName)!="None":
     
     #controller asks model to show all records
-    sys.path.append("C:/xampp/htdocs/IT123P/model/")
+    sys.path.append("C:/xampp/htdocs/OBEYSITEY/model/")
     from MyQueries import MyQuery2
     
     query2 = MyQuery2(searchName)
     results= query2.searchN()
     
     #controller updates the view of data obtained from the model
-    sys.path.append("C:/xampp/htdocs/IT123P/view/")
+    sys.path.append("C:/xampp/htdocs/OBEYSITEY/view/")
     from MyViews import MyView2
    
     view1= MyView2(results)
@@ -59,7 +58,7 @@ if str(searchName)!="None":
 
 if str(addRecordfromIndex)!="None":
     #controller updates the view of addRecord
-    sys.path.append("C:/xampp/htdocs/IT123P/view/")
+    sys.path.append("C:/xampp/htdocs/OBEYSITEY/view/")
     from MyAddRecordBootStrap import MyAddRecordView
     view1 = MyAddRecordView()
     view1.viewADDRecordDesign()
@@ -67,7 +66,7 @@ if str(addRecordfromIndex)!="None":
 if str(addRecordfromBootStrapDesign)!="None":
 
     #controller asks model to perform add record
-    sys.path.append("C:/xampp/htdocs/IT123P/model/")
+    sys.path.append("C:/xampp/htdocs/OBEYSITEY/model/")
     from MyQueries import MyAddRecord
     try:
     # Your existing code here...
@@ -77,7 +76,7 @@ if str(addRecordfromBootStrapDesign)!="None":
         print("Error:", e)
   
     #controller updates the view back to addRecord
-    sys.path.append("C:/xampp/htdocs/IT123P/view/")
+    sys.path.append("C:/xampp/htdocs/OBEYSITEY/view/")
     from MyAddRecordBootStrap import MyAddRecordView
     view1 = MyAddRecordView()
     view1.viewADDRecordDesign()
@@ -85,7 +84,7 @@ if str(addRecordfromBootStrapDesign)!="None":
 if str(backHomefromBootStrapDesign)!="None":
 
     #controller asks updates design back to index or main
-    redirectURL = "http://localhost/IT123P/index.html"
+    redirectURL = "http://localhost/OBEYSITEY/index.html"
     print ('<script type="text/javascript">window.location ="' + redirectURL + '";</script>')
     print("Petmalu")
    

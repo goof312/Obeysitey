@@ -1,4 +1,5 @@
 #!C:\Users\Admin\AppData\Local\Programs\Python\Python312\python
+python_path = config['python']['interpreter_path']
 
 
 import cgi
@@ -27,7 +28,7 @@ class MyAddRecordView(object):
               
                   <div class="col-sm-6" style="background-color:#c3cbd9; padding: 2em">
                    
-                        <form action='\\IT123P\\controller\\MyController.py' method='post'>
+                        <form action='\\OBEYSITEY\\controller\\MyController.py' method='post'>
                         
                             <label>StudID:</label>
                             <input type="text" class="form-control" name="studid" placeholder="Type StudID">
