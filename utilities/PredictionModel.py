@@ -4,7 +4,9 @@ import pandas as pd
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix,accuracy_score
-import InputEnums as en
+import sys
+sys.path.append("C:/xampp/htdocs/Obeysity/Obeysitey/")
+from utilities import InputEnums as en
 
 #inputs
 '''
