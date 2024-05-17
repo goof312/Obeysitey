@@ -1,5 +1,4 @@
 #!C:\Users\User\AppData\Local\Programs\Python\Python310\python
-
 import mysql.connector
 
 import sys

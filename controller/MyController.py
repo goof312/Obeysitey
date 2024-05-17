@@ -1,8 +1,7 @@
 #!C:\Users\User\AppData\Local\Programs\Python\Python310\python
 
-
 print("Content-Type: text/html")
-print()
+print()     
 import cgi
 import sys
 
@@ -51,7 +50,7 @@ if str(searchName)!="None":
     results= query2.searchN()
     
     #controller updates the view of data obtained from the model
-    sys.path.append("C:C:/xampp/htdocs/Obeysitey/Obeysitey/view/")
+    sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/view/")
     from MyViews import MyView2
    
     view1= MyView2(results)
@@ -85,7 +84,7 @@ if str(addRecordfromBootStrapDesign)!="None":
 if str(backHomefromBootStrapDesign)!="None":
 
     #controller asks updates design back to index or main
-    redirectURL = "http://localhost/Obeysitey/Obeysitey/Index.html"
+    redirectURL = "http://localhost/Obeysitey/Obeysitey/index.html"
     print ('<script type="text/javascript">window.location ="' + redirectURL + '";</script>')
     print("Petmalu")
    

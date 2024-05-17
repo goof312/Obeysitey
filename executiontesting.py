@@ -1,0 +1,1 @@
+# Import the MainController class from MainController modulefrom controller import MainController# Create an instance of the MainController class# Call the insertRecord method on the instance
