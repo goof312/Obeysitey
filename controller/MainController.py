@@ -19,7 +19,7 @@ class Controller:
     def __init__(self):
         self.predictionModel = PM.Prediction()
         self.form = cgi.FieldStorage()
-        pass
+        return
 
     # view ------------------------------
     def get_Input(self):
@@ -59,27 +59,17 @@ class Controller:
         u_MTRANS = "Public_Transportation"
         return [u_Age, u_Gender, u_Height, u_Weight, u_CALC, u_FAVC, u_FCVC, u_NCP, u_SCC, u_SMOKE, u_CH20, u_family_history, u_FAF, u_TUE, u_CAEC, u_MTRANS]
 
-
-
     def predict(self):
         # self.predictionModel.PrintStats()
         inputs = self.get_Input()
         result = self.predictionModel.Predict(inputs)
         return(result)
-
-        # SAMPLE PREDICTION AND INPUT
-        
-        # print(self.predictionModel.Predict(inputs))
-        # print(self.predictionModel.Predict([23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]))
-        # return the prediction
     
     # model -----------------------------
     def insertRecord(self, result):
         inputs = self.get_Input()
-        # self.AddRec = MQ.AddRecord(*inputs)
 
         try:
-            #self.AddRec = MQ.AddRecord(23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation", "Insufficient_Weight")
             self.AddRec = MQ.AddRecord(*inputs, result)
             self.AddRec.addRecord()
             print("Added Record")
@@ -92,11 +82,7 @@ class Controller:
         print(results)
         # send sa views
 
-
-# predict = cont.predict()
-# insertRecord()
-# getRecomendation(predict)
-
+# sunod-sunod
 cont = Controller()
 a = cont.predict()
 print("Result: " + a)
