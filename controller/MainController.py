@@ -43,19 +43,29 @@ class Controller:
         pass
 
 
-    def insertRecord(self):
+    # def insertRecord(self):
+    #     sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/model/")
+    #     from MyQueries import AddRecord
+    #     try:
+    #         # Your existing code here...
+    #         myaddrec =AddRecord(23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation", "Insufficient_Weight")
+    #         result = myaddrec.addRecord()
+    #         print("Nadaan dito")
+    #     except mysql.connector.Error as e:
+    #         print("Error:", e)
+
+
+    def getRecomendation(self, category):
         sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/model/")
-        from MyQueries import AddRecord
-        try:
-            # Your existing code here...
-            myaddrec =AddRecord(23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation", "Insufficient_Weight")
-            result = myaddrec.addRecord()
-            print("Nadaan dito")
-        except mysql.connector.Error as e:
-            print("Error:", e)
+        from MyQueries import GetMYrecomendation
+
+        myrecomendation = GetMYrecomendation(category)
+        results = myrecomendation.getRec()
+        print(results)
 
 
 
 cont = Controller()
 cont.predict()
-cont.insertRecord()
+x = "Insufficient_Weight"
+cont.getRecomendation(x)
