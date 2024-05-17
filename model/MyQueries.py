@@ -109,3 +109,24 @@ class AddRecord():
             print("Error:", e)
             return None
 
+class GetMYrecomendation():
+    def __init__(self, __nobeyesdad):
+        self.nobeyesdad = __nobeyesdad
+
+    def getRec(self):
+        try:
+            conn = MyConnection("localhost", "root", "", "obesityrecords")
+            mydb = conn.connect()
+            mycursor = mydb.cursor(raw=True)
+            sql = "SELECT CategoryDes FROM description WHERE Category=%s;"
+            mycursor.execute(sql, (self.nobeyesdad,))
+            myresult = mycursor.fetchone()
+            return  myresult
+        except mysql.connector.Error as e:
+            print("Error:", e)
+            return None
+
+
+
+
+
