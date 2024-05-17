@@ -8,7 +8,7 @@ class MyConnection():
         def __init__(self, host, user, pwd,dbase):    
                 self.host = host
                 self.user = user
-                self.port = 3307
+                self.port = 3306
                 self.pwd = pwd
                 self.dbase = dbase
                 

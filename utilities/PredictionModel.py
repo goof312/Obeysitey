@@ -5,14 +5,13 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix,accuracy_score
 import sys
-sys.path.append("C:/xampp/htdocs/Obeysity/Obeysitey/")
+sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
 from utilities import InputEnums as en
 
 #inputs
 '''
 0: Age: Numeric (continuous)
 1: Gender: Male, Female; changed to (1,0)
-
 2: Height: Numeric (continuous)
 3: Weight: Numeric (continuous) (in kg)
 4: CALC: No, Sometimes, Frequently, Always (I do not drink, Sometimes, Frequently, Always) (Consumption of alcohol) changes to (0, 1, 2, 3)
@@ -110,11 +109,11 @@ class Prediction:
         return arr
 
 #####Implementation
-predictionModel = Prediction()
+#--------------------predictionModel = Prediction()
 
-predictionModel.PrintStats()
+#--------------------predictionModel.PrintStats()
 #SAMPLE PREDICTION AND INPUT
-print(predictionModel.Predict([23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]))
+#--------------------print(predictionModel.Predict([23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]))
 
 ######input format 
 #[23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]
