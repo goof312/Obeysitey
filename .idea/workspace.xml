@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="98e34a83-cff1-4317-8cd5-4a8dacce857b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/controller/MainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MainController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/MyController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MyController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/MyQueries.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/MyQueries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/MyAddRecordBootStrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/MyAddRecordBootStrap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/MyViews.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/MyViews.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2gXilCXBbtuNIYLrf1CIa6cThAm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Marco",
+    "last_opened_file_path": "C:/xampp/htdocs/Obeysitey/Obeysitey"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Obeysitey\Obeysitey\controller" />
+      <recent name="C:\xampp\htdocs\Obeysitey\Obeysitey" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98e34a83-cff1-4317-8cd5-4a8dacce857b" name="Changes" comment="" />
+      <created>1715850471345</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715850471345</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -2,10 +2,13 @@
 
 import cgi
 import sys
+import mysql.connector
+
 # iba iba tayo dito
-sys.path.append("C:/xampp/htdocs/Obeysity/Obeysitey/")
+sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
 from utilities import PredictionModel as PM
 from model import MyQueries
+
 
 class Controller:
     predictionModel = ""
@@ -39,5 +42,20 @@ class Controller:
         # view all inputs
         pass
 
+
+    def insertRecord(self):
+        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/model/")
+        from MyQueries import AddRecord
+        try:
+            # Your existing code here...
+            myaddrec =AddRecord(23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation", "Insufficient_Weight")
+            result = myaddrec.addRecord()
+            print("Nadaan dito")
+        except mysql.connector.Error as e:
+            print("Error:", e)
+
+
+
 cont = Controller()
 cont.predict()
+cont.insertRecord()

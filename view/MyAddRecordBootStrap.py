@@ -27,7 +27,7 @@ class MyAddRecordView(object):
               
                   <div class="col-sm-6" style="background-color:#c3cbd9; padding: 2em">
                    
-                        <form action='\\Obeysity\\Obeysity\\controller\\MyController.py' method='post'>
+                        <form action='\\Obeysitey\\Obeysitey\\controller\\MyController.py' method='post'>
                         
                             <label>StudID:</label>
                             <input type="text" class="form-control" name="studid" placeholder="Type StudID">
