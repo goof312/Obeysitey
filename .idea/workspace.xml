@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e34a83-cff1-4317-8cd5-4a8dacce857b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/controller/MainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MainController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/MyController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MyController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/MyQueries.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/MyQueries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/MyAddRecordBootStrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/MyAddRecordBootStrap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/MyViews.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/MyViews.py" afterDir="false" />
-    </list>
+    <list default="true" id="98e34a83-cff1-4317-8cd5-4a8dacce857b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,12 +20,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "goof312"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a687d9ee-2416-4062-8d9c-2e07da9051c9" />
+        <option name="url" value="https://github.com/goof312/Obeysitey.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2gXilCXBbtuNIYLrf1CIa6cThAm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,7 +49,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Marco",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/xampp/htdocs/Obeysitey/Obeysitey"
   }
 }]]></component>
