@@ -7,12 +7,13 @@ import mysql.connector
 # iba iba tayo dito
 sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
 from utilities import PredictionModel as PM
-from model import MyQueries
+from model import MyQueries as MQ
 
 
 class Controller:
     predictionModel = ""
     form = ""
+    AddRec = ""
 
     def __init__(self):
         self.predictionModel = PM.Prediction()
@@ -34,25 +35,21 @@ class Controller:
         pass
     
     # model -----------------------------
-    def store(self):
-        # db
-        pass
+    def insertRecord(self):
+        try:
+            # Your existing code here...
+            self.AddRec = MQ.AddRecord(23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation", "Insufficient_Weight")
+            self.AddRec.addRecord()
+            print("Nadaan dito")
+        except mysql.connector.Error as e:
+            print("Error:", e)
     
     def get(self):
         # view all inputs
         pass
 
 
-    def insertRecord(self):
-        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/model/")
-        from MyQueries import AddRecord
-        try:
-            # Your existing code here...
-            myaddrec =AddRecord(23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation", "Insufficient_Weight")
-            result = myaddrec.addRecord()
-            print("Nadaan dito")
-        except mysql.connector.Error as e:
-            print("Error:", e)
+    
 
 
 
