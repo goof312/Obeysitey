@@ -10,7 +10,7 @@ form = cgi.FieldStorage()
 #so these are data we posted from index 
 getALL=form.getvalue("ALL")
 searchName=form.getvalue("name")
-addRecordfromIndex=form.getvalue("ADD")
+addRecordfromIndex=form.getvalue("TAKE")
 
 #so these are data we posted from HTML Design MyAddRecordBoostrap
 addRecordfromBootStrapDesign=form.getvalue("send")
@@ -59,9 +59,9 @@ if str(searchName)!="None":
 if str(addRecordfromIndex)!="None":
     #controller updates the view of addRecord
     sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/view/")
-    from MyAddRecordBootStrap import MyAddRecordView
-    view1 = MyAddRecordView()
-    view1.viewADDRecordDesign()
+    from TestPage import MyTestPageView
+    view1 = MyTestPageView()
+    view1.viewAddRecordTestpage()
     
 if str(addRecordfromBootStrapDesign)!="None":
 
@@ -77,14 +77,14 @@ if str(addRecordfromBootStrapDesign)!="None":
   
     #controller updates the view back to addRecord
     sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/view/")
-    from MyAddRecordBootStrap import MyAddRecordView
-    view1 = MyAddRecordView()
-    view1.viewADDRecordDesign()
+    from TestPage import MyTestPageView
+    view1 = MyTestPageView()
+    view1.viewAddRecordTestpage()
     
 if str(backHomefromBootStrapDesign)!="None":
 
     #controller asks updates design back to index or main
-    redirectURL = "http://localhost/Obeysitey/Obeysitey/index.html"
+    redirectURL = "http://localhost/Obeysitey/Obeysitey/Index.html"
     print ('<script type="text/javascript">window.location ="' + redirectURL + '";</script>')
     print("Petmalu")
    
