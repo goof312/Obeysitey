@@ -1,11 +1,11 @@
-#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
 print("Content-Type: text/html")
 print()     
 import cgi
 import sys
-#from model import MyQueries as MQ
-#from utilities import PredictionModel as PM
-#import MainController
+
+
+
 
 form = cgi.FieldStorage()
 
@@ -55,7 +55,7 @@ if str(getALL)!="None":
     #controller updates the view of data obtained from the model
     sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/view/")
     from MyViews import MyView1
-   
+
     view1=MyView1(results)
     view1.viewAll()
 
@@ -117,19 +117,29 @@ if str(sendTestBtn)!="None":
         posted_MTRANS
         ]
     
-    #sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/controller/")
+
+    print('<script> console.log("is here"); </script>')
+    print('<script> console.log("is hergegee"); </script>')
     
+    sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/utilities/")
+    import PredictionModel
 
-    #cont = MainController.Controller()
-    #a = cont.predict()
-    #b = cont.getRecomendation(a)
-    #tryInput = [23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]
+    tryInput = [23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]
+    print('<script> console.log("is after prediction model import"); </script>')
 
-    #predResult = PM.predictionModel.Predict(tryInput)
+    pred = PredictionModel.Prediction()
+    
+    predResult = pred.Predict(tryInput)
+    print(predResult)
 
-    #myrecomendation = MQ.GetMYrecomendation(predResult)
-    #results = myrecomendation.getRec()
+    print('<script> console.log("is HERHERHEHREJRHEJRHSKJ HFAKJ"); </script>')
 
+    sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/model/")
+    import MyQueries
+    myrecomendation = MyQueries.GetMYrecomendation(predResult)
+    results = myrecomendation.getRec()
+
+    print(results)
     #controller updates the view back to addRecord
     sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/view/")
     from ResultPage import MyTestPageView

@@ -1,13 +1,13 @@
-#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+
+
+print("testing")
+print()     
 
 import cgi
 import sys
 import mysql.connector
 
-# iba iba ata tayo dito
-sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
-from utilities import PredictionModel as PM
-from model import MyQueries as MQ
+
 
 
 class Controller():
@@ -16,7 +16,11 @@ class Controller():
     AddRec = ""
     GetRec = ""
 
+
     def __init__(self):
+        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
+        from utilities import PredictionModel as PM
+        from model import MyQueries as MQ
         self.predictionModel = PM.Prediction()
         self.form = cgi.FieldStorage()
         return
@@ -68,7 +72,9 @@ class Controller():
     # model -----------------------------
     def insertRecord(self, result):
         inputs = self.get_Input()
-
+        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
+        from utilities import PredictionModel as PM
+        from model import MyQueries as MQ
         try:
             self.AddRec = MQ.AddRecord(*inputs, result)
             self.AddRec.addRecord()
@@ -77,6 +83,10 @@ class Controller():
             print("Error:", e)
 
     def getRecomendation(self, category):
+        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
+        from utilities import PredictionModel as PM
+        from model import MyQueries as MQ
+        
         myrecomendation = MQ.GetMYrecomendation(category)
         results = myrecomendation.getRec()
         print(results)

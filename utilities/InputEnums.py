@@ -1,3 +1,5 @@
+#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
+
 from enum import IntEnum
 
 class Gender(IntEnum):
