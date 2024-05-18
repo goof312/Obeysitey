@@ -94,9 +94,12 @@ class Prediction:
         string of result
     '''
     def Predict(self, arrayVals):
+        
         arrayVals = self.__convertInputs(arrayVals)
         print(" ".join(map(str, arrayVals)))
+        print("<script> console.log('" + "magppppppredict" + "'); </script>")
         test1 = self.classifier.predict([arrayVals])
+        print("<script> console.log('" + "ayaw mo predict?" + "'); </script>")
         return test1[0] #Returns string of result
     
     #Private method to convert input array

@@ -1,5 +1,6 @@
-#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
+print('<script> console.log("start"); </script>')
 
 import cgi
 
@@ -131,9 +132,9 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="fcvcnever" type="radio" name="FCVC" value="never" checked required/></td>
-                    <td><input class="radzize" id="fcvcsometimes" type="radio" name="FCVC" value="sometimes" checked required/></td>
-                    <td><input class="radzize" id="fcvcalways" type="radio" name="FCVC" value="always" checked required/></td>
+                    <td><input class="radzize" id="fcvcnever" type="radio" name="FCVC" value="1" checked required/></td>
+                    <td><input class="radzize" id="fcvcsometimes" type="radio" name="FCVC" value="2" checked required/></td>
+                    <td><input class="radzize" id="fcvcalways" type="radio" name="FCVC" value="3" checked required/></td>
                 </tr>
                 <tr>
                     <td>Never</td>

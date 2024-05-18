@@ -1,4 +1,4 @@
-#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
 
 import cgi
@@ -51,10 +51,11 @@ class MyTestPageView(object):
             <p>
                   <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
                     NObeyesdad: Type of obesity - insufficient_weight, normal_weight, overweight-level_i, overweight-level_ii, obesity_type_i, obesity_type_ii, obesity_type_iii
+                      
+                      """
+                      + self.recomendation + 
+                      """
                   </div>
-              """
-              + self.recomendation + 
-              """
             </p>
             <br>
             <br>
