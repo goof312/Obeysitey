@@ -1,25 +1,45 @@
-#!C:\Users\User\AppData\Local\Programs\Python\Python310\python
-
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 print("Content-Type: text/html")
 print()     
 import cgi
 import sys
+#from model import MyQueries as MQ
+#from utilities import PredictionModel as PM
+#import MainController
 
 form = cgi.FieldStorage()
 
 #so these are data we posted from index 
 getALL=form.getvalue("ALL")
 searchName=form.getvalue("name")
-addRecordfromIndex=form.getvalue("TAKE")
+takeTestBtn=form.getvalue("TAKE")
 
 #so these are data we posted from HTML Design MyAddRecordBoostrap
-addRecordfromBootStrapDesign=form.getvalue("send")
+sendTestBtn=form.getvalue("send")
 backHomefromBootStrapDesign=form.getvalue("back")
 
 postedID=form.getvalue("studid")
 postedName=form.getvalue("studname")
 postedAge=form.getvalue("age")
 postedDegree=form.getvalue("degree")
+
+# posted test values ================================================================
+posted_Age = form.getvalue("age")
+posted_Gender = form.getvalue("gender")
+posted_Height = form.getvalue("height")
+posted_Weight = form.getvalue("weight")
+posted_CALC = form.getvalue("CALC")
+posted_FAVC = form.getvalue("FAVC")
+posted_FCVC = form.getvalue("FCVC")
+posted_NCP = form.getvalue("NCP")
+posted_SCC = form.getvalue("SCC")
+posted_SMOKE = form.getvalue("SMOKE")
+posted_CH20 = form.getvalue("CH2O")
+posted_family_history = form.getvalue("family_history")
+posted_FAF = form.getvalue("FAF")
+posted_TUE = form.getvalue("TUE")
+posted_CAEC = form.getvalue("CAEC")
+posted_MTRANS = form.getvalue("MTRANS")
 
 
 
@@ -56,16 +76,18 @@ if str(searchName)!="None":
     view1= MyView2(results)
     view1.viewSearched()
 
-if str(addRecordfromIndex)!="None":
+
+# take test button ===============================================================
+if str(takeTestBtn)!="None":
     #controller updates the view of addRecord
     sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/view/")
     from TestPage import MyTestPageView
     view1 = MyTestPageView()
     view1.viewAddRecordTestpage()
 
-    
-if str(addRecordfromBootStrapDesign)!="None":
-
+# submit test =====================================================================
+if str(sendTestBtn)!="None":
+    '''
     #controller asks model to perform add record
     sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/model/")
     from MyQueries import MyAddRecord
@@ -75,13 +97,44 @@ if str(addRecordfromBootStrapDesign)!="None":
         result=myaddrec.addRec()
     except mysql.connector.Error as e:
         print("Error:", e)
-  
+  '''
+    form_data = [
+        posted_Age,
+        posted_Gender,
+        posted_Height,
+        posted_Weight,
+        posted_CALC,
+        posted_FAVC,
+        posted_FCVC,
+        posted_NCP,
+        posted_SCC,
+        posted_SMOKE,
+        posted_CH20,
+        posted_family_history,
+        posted_FAF,
+        posted_TUE,
+        posted_CAEC,
+        posted_MTRANS
+        ]
+    
+    #sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/controller/")
+    
+
+    #cont = MainController.Controller()
+    #a = cont.predict()
+    #b = cont.getRecomendation(a)
+    #tryInput = [23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]
+
+    #predResult = PM.predictionModel.Predict(tryInput)
+
+    #myrecomendation = MQ.GetMYrecomendation(predResult)
+    #results = myrecomendation.getRec()
+
     #controller updates the view back to addRecord
     sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/view/")
-    from TestPage import MyTestPageView
-    view1 = MyTestPageView()
-    view1.viewAddRecordTestpage()
-
+    from ResultPage import MyTestPageView
+    viewResult = MyTestPageView("<div>"+ "sd" + "</div>")
+    viewResult.viewResultPage()
     
 if str(backHomefromBootStrapDesign)!="None":
 

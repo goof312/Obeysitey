@@ -1,4 +1,4 @@
-#!C:\Users\User\AppData\Local\Programs\Python\Python310\python
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
 
 import mysql.connector

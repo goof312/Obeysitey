@@ -1,4 +1,4 @@
-#!C:\Users\Admin\AppData\Local\Programs\Python\Python312\python
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
 import cgi
 import sys
@@ -10,7 +10,7 @@ from utilities import PredictionModel as PM
 from model import MyQueries as MQ
 
 
-class Controller:
+class Controller():
     predictionModel = ""
     form = ""
     AddRec = ""
@@ -80,16 +80,17 @@ class Controller:
         myrecomendation = MQ.GetMYrecomendation(category)
         results = myrecomendation.getRec()
         print(results)
+        return results
         # send sa views
 
 # sunod-sunod
+'''
 cont = Controller()
 a = cont.predict()
 print("Result: " + a)
 cont.insertRecord(a)
 cont.getRecomendation(a)
 
-'''
 arr = ['1', 2, 3, "33"]
 print(arr)
 print(*arr)

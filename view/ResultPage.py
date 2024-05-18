@@ -1,8 +1,10 @@
-#!C:\Users\User\AppData\Local\Programs\Python\Python310\python
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
 import cgi
 
 class MyTestPageView(object):
+    def __init__(self, recomendation):
+        self.recomendation = recomendation
      
     def viewResultPage(self):
         print("""
@@ -49,6 +51,9 @@ class MyTestPageView(object):
                   <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
                     NObeyesdad: Type of obesity - insufficient_weight, normal_weight, overweight-level_i, overweight-level_ii, obesity_type_i, obesity_type_ii, obesity_type_iii
                   </div>
+              """
+              + self.recomendation + 
+              """
             </p>
             <br>
             <br>

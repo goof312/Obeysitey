@@ -1,4 +1,4 @@
-#!C:\Users\User\AppData\Local\Programs\Python\Python310\python
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
 import cgi
 
@@ -49,7 +49,7 @@ class MyTestPageView(object):
               
     <div class="container d-flex-justify-content-center">
         <center>
-            <form action ="MyController.py" method ="post">
+            <form action ="/Obeysitey/Obeysitey/controller/MyController.py" method ="post">
             <br>
             <h1 style="font-size:50px;">Obesity Test</h1>
             <br>
