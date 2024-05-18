@@ -51,7 +51,7 @@ class MyTestPageView(object):
               
     <div class="container d-flex-justify-content-center">
         <center>
-            <form action ="/Obeysitey/Obeysitey/controller/MyController.py" method ="post">
+            <form action ="/Obeysitey/Obeysitey/controller/MainController.py" method ="post">
             <br>
             <h1 style="font-size:50px;">Obesity Test</h1>
             <br>

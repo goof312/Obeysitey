@@ -43,7 +43,7 @@ class MyTestPageView(object):
       </nav>
     <div>
         <center>
-            <form action ="MyController.py" method ="post">
+            <form action ="MainController.py" method ="post">
             <br>
             <h1>YOUR RESULT</h1>
                 

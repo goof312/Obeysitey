@@ -1,99 +1,117 @@
-
-
-print("testing")
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+print("Content-Type: text/html")
 print()     
 
 import cgi
 import sys
 import mysql.connector
 
+sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
+from utilities import PredictionModel as PM
+from model import MyQueries as MQ
+from view import TestPage as TP
+from view import ResultPage as RP
+
+
+form = cgi.FieldStorage()
+
+takeTestBtn = form.getvalue("TAKE")
+sendTestBtn = form.getvalue("send")
+backBtn = form.getvalue("back")
 
 
 
 class Controller():
     predictionModel = ""
-    form = ""
     AddRec = ""
     GetRec = ""
 
-
     def __init__(self):
-        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
-        from utilities import PredictionModel as PM
-        from model import MyQueries as MQ
         self.predictionModel = PM.Prediction()
-        self.form = cgi.FieldStorage()
         return
 
     # view ------------------------------
     def get_Input(self):
-        '''
-        u_Age = self.form.getvalue("u_Age")
-        u_Gender = self.form.getvalue("u_Gender")
-        u_Height = self.form.getvalue("u_Height")
-        u_Weight = self.form.getvalue("u_Weight")
-        u_CALC = self.form.getvalue("u_CALC")
-        u_FAVC = self.form.getvalue("u_FAVC")
-        u_FCVC = self.form.getvalue("u_FCVC")
-        u_NCP = self.form.getvalue("u_NCP")
-        u_SCC = self.form.getvalue("u_SCC")
-        u_SMOKE = self.form.getvalue("u_SMOKE")
-        u_CH20 = self.form.getvalue("u_CH20")
-        u_family_history = self.form.getvalue("u_family_history")
-        u_FAF = self.form.getvalue("u_FAF")
-        u_TUE = self.form.getvalue("u_TUE")
-        u_CAEC = self.form.getvalue("u_CAEC")
-        u_MTRANS = self.form.getvalue("u_MTRANS")
-        '''
-        u_Age = 23
-        u_Gender = "Male"
-        u_Height = 1.65
-        u_Weight = 60
-        u_CALC = "No"
-        u_FAVC = "No"
-        u_FCVC = 2
-        u_NCP = 1
-        u_SCC = "No"
-        u_SMOKE = "No"
-        u_CH20 = 3
-        u_family_history = "No"
-        u_FAF = 1
-        u_TUE = 2
-        u_CAEC = "Sometimes"
-        u_MTRANS = "Public_Transportation"
-        return [u_Age, u_Gender, u_Height, u_Weight, u_CALC, u_FAVC, u_FCVC, u_NCP, u_SCC, u_SMOKE, u_CH20, u_family_history, u_FAF, u_TUE, u_CAEC, u_MTRANS]
-
+        return [
+            float(form.getvalue("age")),
+            form.getvalue("gender"),
+            float(form.getvalue("height")),
+            float(form.getvalue("weight")),
+            form.getvalue("CALC"),
+            form.getvalue("FAVC"),
+            int(form.getvalue("FCVC")),
+            int(form.getvalue("NCP")),
+            form.getvalue("SCC"),
+            form.getvalue("SMOKE"),
+            int(form.getvalue("CH2O")),
+            form.getvalue("family_history"),
+            int(form.getvalue("FAF")),
+            int(form.getvalue("TUE")),
+            form.getvalue("CAEC"),
+            form.getvalue("MTRANS")
+        ]
+    
     def predict(self):
         # self.predictionModel.PrintStats()
         inputs = self.get_Input()
+        print('<script> console.log("here"); </script>')
+
         result = self.predictionModel.Predict(inputs)
-        return(result)
+        return result
     
-    # model -----------------------------
     def insertRecord(self, result):
         inputs = self.get_Input()
-        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
-        from utilities import PredictionModel as PM
-        from model import MyQueries as MQ
         try:
             self.AddRec = MQ.AddRecord(*inputs, result)
             self.AddRec.addRecord()
-            print("Added Record")
+            print('<script> console.log("Added Record"); </script>')
         except mysql.connector.Error as e:
             print("Error:", e)
 
-    def getRecomendation(self, category):
-        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
-        from utilities import PredictionModel as PM
-        from model import MyQueries as MQ
-        
+    def getRecommendation(self, category):
         myrecomendation = MQ.GetMYrecomendation(category)
         results = myrecomendation.getRec()
         print(results)
         return results
         # send sa views
 
-# sunod-sunod
+
+# main =====================================================================
+cont = Controller()
+
+# take test  
+if str(takeTestBtn)!="None":
+    print('<script> console.log("Test Button is pressed"); </script>') 
+    view_TestPage = TP.MyTestPageView()
+    view_TestPage.viewAddRecordTestpage()
+
+# submit test 
+if str(sendTestBtn)!="None":
+    print('<script> console.log("Predict"); </script>')
+    prediction = cont.predict()
+    print('<script> console.log("Recommend"); </script>')
+    recommendation = cont.getRecommendation(prediction)
+    print('<script> console.log("Insert"); </script>')
+    cont.insertRecord(prediction)
+
+    viewResult = RP.MyTestPageView(str(recommendation))
+    viewResult.viewResultPage()
+
+# back button
+if str(backBtn)!="None":
+    redirectURL = "http://localhost/Obeysitey/Obeysitey/Index.html"
+    print ('<script type="text/javascript">window.location ="' + redirectURL + '";</script>')
+    print("Petmalu")
+
+
+
+
+
+
+
+
+
+# wala lang
 '''
 cont = Controller()
 a = cont.predict()

@@ -71,6 +71,7 @@ class Prediction:
         self.y_pred = self.classifier.predict(self.X_test)
         self.result = confusion_matrix(self.y_test, self.y_pred)
 
+        print("<script> console.log('" + "JEZ NANDITO AKO3" + "'); </script>")
 
         return
 
