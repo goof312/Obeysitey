@@ -62,6 +62,7 @@ if str(addRecordfromIndex)!="None":
     from TestPage import MyTestPageView
     view1 = MyTestPageView()
     view1.viewAddRecordTestpage()
+
     
 if str(addRecordfromBootStrapDesign)!="None":
 
@@ -80,6 +81,7 @@ if str(addRecordfromBootStrapDesign)!="None":
     from TestPage import MyTestPageView
     view1 = MyTestPageView()
     view1.viewAddRecordTestpage()
+
     
 if str(backHomefromBootStrapDesign)!="None":
 

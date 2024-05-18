@@ -1,3 +1,11 @@
+#!C:\Users\User\AppData\Local\Programs\Python\Python310\python
+
+import cgi
+
+class MyTestPageView(object):
+     
+    def viewResultPage(self):
+        print("""
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,7 +40,7 @@
       </nav>
     <div>
         <center>
-            <form action ="controller/MyController.py" method ="post">
+            <form action ="MyController.py" method ="post">
             <br>
             <h1>YOUR RESULT</h1>
                 
@@ -61,3 +69,6 @@
 </html>
 
 
+
+
+""")

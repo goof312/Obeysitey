@@ -6,6 +6,7 @@ class MyTestPageView(object):
      
     def viewAddRecordTestpage(self):
         print("""
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -59,8 +60,8 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="radgenderMale" type="radio" name="gender" value="male" /></td>
-                    <td><input class="radzize" id="radgenderFemale" type="radio" name="gender" value="female" /></td>
+                    <td><input class="radzize" id="radgenderMale" type="radio" name="gender" value="male" checked required/></td>
+                    <td><input class="radzize" id="radgenderFemale" type="radio" name="gender" value="female" checked required/></td>
                 </tr>
                 <tr>
                     <td>Male</td>
@@ -73,22 +74,22 @@ class MyTestPageView(object):
         
         <br>
         <p class="lead" style="font-size:30px;">Age</p>
-        <div>
-            <input type="text" class="form-control" name="age" placeholder="Type Age">
+        <div class="col-xs-2">
+            <input type="number" class="form-control" name="age" placeholder="Type Age" min="0" max="100">
         </div>
 
 
         <br>
         <p class="lead" style="font-size:30px;">Height</p>
         <div>		
-            <input type="text" class="form-control" name="height" placeholder="Type height (in meters)">
+            <input type="number" class="form-control" name="height" placeholder="Type height (in meters)" min="0" max="3">
         </div>
 
 
         <br>
         <p class="lead" style="font-size:30px;">Weight</p>
         <div>		
-            <input type="text" class="form-control" name="weight" placeholder="Type Weight (in kg)">
+            <input type="text" class="form-control" name="weight" placeholder="Type Weight (in kg)" min="0" max="700">
         </div>
 
 
@@ -97,8 +98,8 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="historyyes" type="radio" name="family_history" value="Yes" /></td>
-                    <td><input class="radzize" id="historyno" type="radio" name="family_history" value="No" /></td>
+                    <td><input class="radzize" id="historyyes" type="radio" name="family_history" value="Yes" checked required/></td>
+                    <td><input class="radzize" id="historyno" type="radio" name="family_history" value="No" checked required/></td>
                 </tr>
                 <tr>
                     <td>Yes</td>
@@ -113,8 +114,8 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="FAVCyes" type="radio" name="FAVC" value="Yes" /></td>
-                    <td><input class="radzize" id="FAVCno" type="radio" name="FAVC" value="No" /></td>
+                    <td><input class="radzize" id="FAVCyes" type="radio" name="FAVC" value="Yes" checked required/></td>
+                    <td><input class="radzize" id="FAVCno" type="radio" name="FAVC" value="No" checked required/></td>
                 </tr>
                 <tr>
                     <td>Yes</td>
@@ -129,9 +130,9 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="fcvcnever" type="radio" name="FCVC" value="never" /></td>
-                    <td><input class="radzize" id="fcvcsometimes" type="radio" name="FCVC" value="sometimes" /></td>
-                    <td><input class="radzize" id="fcvcalways" type="radio" name="FCVC" value="always" /></td>
+                    <td><input class="radzize" id="fcvcnever" type="radio" name="FCVC" value="never" checked required/></td>
+                    <td><input class="radzize" id="fcvcsometimes" type="radio" name="FCVC" value="sometimes" checked required/></td>
+                    <td><input class="radzize" id="fcvcalways" type="radio" name="FCVC" value="always" checked required/></td>
                 </tr>
                 <tr>
                     <td>Never</td>
@@ -147,9 +148,9 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="ncp1" type="radio" name="NCP" value="1" /></td>
-                    <td><input class="radzize" id="ncp2" type="radio" name="NCP" value="2" /></td>
-                    <td><input class="radzize" id="ncp3" type="radio" name="NCP" value="3" /></td>
+                    <td><input class="radzize" id="ncp1" type="radio" name="NCP" value="1" checked required/></td>
+                    <td><input class="radzize" id="ncp2" type="radio" name="NCP" value="2" checked required/></td>
+                    <td><input class="radzize" id="ncp3" type="radio" name="NCP" value="3" checked required/></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -165,10 +166,10 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="caecno" type="radio" name="CAEC" value="No" /></td>
-                    <td><input class="radzize" id="caecsometimes" type="radio" name="CAEC" value="Sometimes" /></td>
-                    <td><input class="radzize" id="caecfreq" type="radio" name="CAEC" value="Frequently" /></td>
-                    <td><input class="radzize" id="caecalways" type="radio" name="CAEC" value="Always" /></td>
+                    <td><input class="radzize" id="caecno" type="radio" name="CAEC" value="No" checked required/></td>
+                    <td><input class="radzize" id="caecsometimes" type="radio" name="CAEC" value="Sometimes" checked required/></td>
+                    <td><input class="radzize" id="caecfreq" type="radio" name="CAEC" value="Frequently" checked required/></td>
+                    <td><input class="radzize" id="caecalways" type="radio" name="CAEC" value="Always" checked required/></td>
                 </tr>
                 <tr>
                     <td>No</td>
@@ -185,8 +186,8 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="smokeyes" type="radio" name="SMOKE" value="Yes" /></td>
-                    <td><input class="radzize" id="smokeno" type="radio" name="SMOKE" value="No" /></td>
+                    <td><input class="radzize" id="smokeyes" type="radio" name="SMOKE" value="Yes" checked required/></td>
+                    <td><input class="radzize" id="smokeno" type="radio" name="SMOKE" value="No" checked required/></td>
                 </tr>
                 <tr>
                     <td>Yes</td>
@@ -201,9 +202,9 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="CH2Oless" type="radio" name="CH2O" value="1" /></td>
-                    <td><input class="radzize" id="CH2Obetween" type="radio" name="CH2O" value="2" /></td>
-                    <td><input class="radzize" id="CH2Omore" type="radio" name="CH2O" value="3" /></td>
+                    <td><input class="radzize" id="CH2Oless" type="radio" name="CH2O" value="1" checked required/></td>
+                    <td><input class="radzize" id="CH2Obetween" type="radio" name="CH2O" value="2" checked required/></td>
+                    <td><input class="radzize" id="CH2Omore" type="radio" name="CH2O" value="3" checked required/></td>
                 </tr>
                 <tr>
                     <td>Less than 1 litter</td>
@@ -219,8 +220,8 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="SCCyes" type="radio" name="SCC" value="Yes" /></td>
-                    <td><input class="radzize" id="SCCno" type="radio" name="SCC" value="No" /></td>
+                    <td><input class="radzize" id="SCCyes" type="radio" name="SCC" value="Yes" checked required/></td>
+                    <td><input class="radzize" id="SCCno" type="radio" name="SCC" value="No" checked required/></td>
                 </tr>
                 <tr>
                     <td>Yes</td>
@@ -235,10 +236,10 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="FAF1" type="radio" name="FAF" value="0" /></td>
-                    <td><input class="radzize" id="FAF2" type="radio" name="FAF" value="1" /></td>
-                    <td><input class="radzize" id="FAF3" type="radio" name="FAF" value="2" /></td>
-                    <td><input class="radzize" id="FAF" type="radio" name="FAF" value="3" /></td>
+                    <td><input class="radzize" id="FAF1" type="radio" name="FAF" value="0" checked required/></td>
+                    <td><input class="radzize" id="FAF2" type="radio" name="FAF" value="1" checked required/></td>
+                    <td><input class="radzize" id="FAF3" type="radio" name="FAF" value="2" checked required/></td>
+                    <td><input class="radzize" id="FAF" type="radio" name="FAF" value="3" checked required/></td>
                 </tr>
                 <tr>
                     <td>0</td>
@@ -255,9 +256,9 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="TUE1" type="radio" name="TUE" value="0" /></td>
-                    <td><input class="radzize" id="TUE2" type="radio" name="TUE" value="1" /></td>
-                    <td><input class="radzize" id="TUE3" type="radio" name="TUE" value="2" /></td>
+                    <td><input class="radzize" id="TUE1" type="radio" name="TUE" value="0" checked required/></td>
+                    <td><input class="radzize" id="TUE2" type="radio" name="TUE" value="1" checked required/></td>
+                    <td><input class="radzize" id="TUE3" type="radio" name="TUE" value="2" checked required/></td>
                 </tr>
                 <tr>
                     <td>0 to 2</td>
@@ -273,10 +274,10 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="CALCno" type="radio" name="CALC" value="No" /></td>
-                    <td><input class="radzize" id="CALCsometimes" type="radio" name="CALC" value="Sometimes" /></td>
-                    <td><input class="radzize" id="CALCfreq" type="radio" name="CALC" value="Frequently" /></td>
-                    <td><input class="radzize" id="CALCalways" type="radio" name="CALC" value="Always" /></td>
+                    <td><input class="radzize" id="CALCno" type="radio" name="CALC" value="No" checked required/></td>
+                    <td><input class="radzize" id="CALCsometimes" type="radio" name="CALC" value="Sometimes" checked required/></td>
+                    <td><input class="radzize" id="CALCfreq" type="radio" name="CALC" value="Frequently" checked required/></td>
+                    <td><input class="radzize" id="CALCalways" type="radio" name="CALC" value="Always" checked required/></td>
                 </tr>
                 <tr>
                     <td>No</td>
@@ -293,11 +294,11 @@ class MyTestPageView(object):
         <div>
             <table id="likert">
                 <tr>
-                    <td><input class="radzize" id="MTRANSauto" type="radio" name="MTRANS" value="Automobile" /></td>
-                    <td><input class="radzize" id="MTRANSmotor" type="radio" name="MTRANS" value="Motorbike" /></td>
-                    <td><input class="radzize" id="MTRANSbike" type="radio" name="MTRANS" value="Bike" /></td>
-                    <td><input class="radzize" id="MTRANStranspo" type="radio" name="MTRANS" value="Public_Transportation" /></td>
-                    <td><input class="radzize" id="MTRANSwalking" type="radio" name="MTRANS" value="Walking" /></td>
+                    <td><input class="radzize" id="MTRANSauto" type="radio" name="MTRANS" value="Automobile" checked required/></td>
+                    <td><input class="radzize" id="MTRANSmotor" type="radio" name="MTRANS" value="Motorbike" checked required/></td>
+                    <td><input class="radzize" id="MTRANSbike" type="radio" name="MTRANS" value="Bike" checked required/></td>
+                    <td><input class="radzize" id="MTRANStranspo" type="radio" name="MTRANS" value="Public_Transportation" checked required/></td>
+                    <td><input class="radzize" id="MTRANSwalking" type="radio" name="MTRANS" value="Walking" checked required/></td>
                 </tr>
                 <tr>
                     <td>Automobile</td>
@@ -309,8 +310,10 @@ class MyTestPageView(object):
             </table>
         </div> 
             <br>
-            <input type="submit" class="btn btn-primary" name="back" value="BACK HOME">
-            <input type="submit" class="btn btn-primary" name="send" value="Send">	
+
+            <input type="submit" class="btn btn-primary btn-lg" name="back" value="BACK HOME" >
+            <input type="submit" class="btn btn-primary btn-lg" name="send" value="SEND" >
+
             <br>
             <br>
             </form>
@@ -319,8 +322,6 @@ class MyTestPageView(object):
     </div>
 </body>
 </html>
-
-
 
 
 """)
