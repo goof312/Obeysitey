@@ -1,12 +1,10 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
+import pandas
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix,accuracy_score
 import sys
-sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/")
-from utilities import InputEnums as en
+sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/utilities/")
+import InputEnums
 
 #inputs
 '''
@@ -37,7 +35,7 @@ test1 = classifier.predict([[23, 1, 1.65, 49, 0, 0, 2, 1, 0, 0, 3, 0, 1, 2, 1, 3
 class Prediction:
     headernames = ['Age','Gender','Height','Weight','CALC','FAVC','FCVC','NCP','SCC','SMOKE','CH2O','family_history_with_overweight','FAF','TUE','CAEC','MTRANS','NObeyesdad']
     #path = "./resources/ObesityDataSet_raw_and_data_sinthetic_PROPERbinned_noheader.csv"
-    path = "./resources/ObesityDataSet_raw_and_data_sinthetic_binned_noheader.csv"
+    path = "C:/xampp/htdocs/Obeysitey/Obeysitey/resources/ObesityDataSet_raw_and_data_sinthetic_binned_noheader.csv"
     
     result = ""
     X = 0 
@@ -53,8 +51,14 @@ class Prediction:
     Initialize Object
     '''
     def __init__(self):
-        dataset = pd.read_csv(self.path, names=self.headernames)
-        dataset.head() #organic data
+        print("<script> console.log('" + "JEZ NANDITO AKO" + "'); </script>")
+        sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/resources/")
+
+        dataset = pandas.read_csv(self.path, names=self.headernames)
+        print("<script> console.log('" + "JEZ NANDITO AKO2" + "'); </script>")
+
+        dataset.head() #organic dat a
+
 
         self.X = dataset.iloc[:, :-1].values
         self.y = dataset.iloc[:, 16].values
@@ -66,6 +70,9 @@ class Prediction:
 
         self.y_pred = self.classifier.predict(self.X_test)
         self.result = confusion_matrix(self.y_test, self.y_pred)
+
+        print("<script> console.log('" + "JEZ NANDITO AKO3" + "'); </script>")
+
         return
 
     '''
@@ -88,23 +95,26 @@ class Prediction:
         string of result
     '''
     def Predict(self, arrayVals):
+        
         arrayVals = self.__convertInputs(arrayVals)
         print(" ".join(map(str, arrayVals)))
+        print("<script> console.log('" + "magppppppredict" + "'); </script>")
         test1 = self.classifier.predict([arrayVals])
+        print("<script> console.log('" + "ayaw mo predict?" + "'); </script>")
         return test1[0] #Returns string of result
     
     #Private method to convert input array
     def __convertInputs(self, arr):
         indGender = 1; indCALC = 4; indFAVC = 5; indSCC = 8; indSmoke = 9; indHistory = 11; indCAEC = 14; indTrans = 15
-        arr[indGender] = en.Gender[arr[indGender].lower()]
+        arr[indGender] = InputEnums.Gender[arr[indGender].lower()]
         print(arr[indGender])
-        arr[indCALC] = en.CALC[arr[indCALC].lower()]
-        arr[indFAVC] = en.YesNo[arr[indFAVC].lower()]
-        arr[indSCC] = en.YesNo[arr[indSCC].lower()]
-        arr[indSmoke] = en.YesNo[arr[indSmoke].lower()]
-        arr[indHistory] = en.YesNo[arr[indHistory].lower()]
-        arr[indCAEC] = en.CAEC[arr[indCAEC].lower()]
-        arr[indTrans] = en.MTRANS[arr[indTrans].lower()]
+        arr[indCALC] = InputEnums.CALC[arr[indCALC].lower()]
+        arr[indFAVC] = InputEnums.YesNo[arr[indFAVC].lower()]
+        arr[indSCC] = InputEnums.YesNo[arr[indSCC].lower()]
+        arr[indSmoke] = InputEnums.YesNo[arr[indSmoke].lower()]
+        arr[indHistory] = InputEnums.YesNo[arr[indHistory].lower()]
+        arr[indCAEC] = InputEnums.CAEC[arr[indCAEC].lower()]
+        arr[indTrans] = InputEnums.MTRANS[arr[indTrans].lower()]
         
         return arr
 

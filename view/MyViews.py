@@ -1,5 +1,5 @@
+#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
 
-#!C:\Users\Admin\AppData\Local\Programs\Python\Python312\python
 import mysql.connector
 
 import sys
@@ -61,7 +61,7 @@ class MyView2():
         print("<center>")
         print("<h1>My Sample SEMI-MVC</h1>")
        
-        print("<form action='/Obeysity/Obeysity/controller/MyController.py' method='post'>")
+        print("<form action='/Obeysitey/Obeysitey/controller/MyController.py' method='post'>")
         print("Enter name: <input type='text' name ='name'>")
         print("<input type ='submit' name ='search' value = 'SEARCH'/>")
         print("</form>")

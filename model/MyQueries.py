@@ -1,11 +1,11 @@
-#!C:\Users\Admin\AppData\Local\Programs\Python\Python312\python
+#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+
 
 
 import mysql.connector
 import mysql
 
 import sys
-
 sys.path.append("C:/xampp/htdocs/Obeysitey/Obeysitey/model/")
 from MyConnection import MyConnection
 
