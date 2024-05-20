@@ -1,5 +1,6 @@
 import pandas
 from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix,accuracy_score
 import sys
@@ -57,7 +58,7 @@ class Prediction:
         dataset = pandas.read_csv(self.path, names=self.headernames)
         print("<script> console.log('" + "JEZ NANDITO AKO2" + "'); </script>")
 
-        dataset.head() #organic dat a
+        dataset.head() #organic data 498
 
 
         self.X = dataset.iloc[:, :-1].values
@@ -65,7 +66,8 @@ class Prediction:
 
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, test_size=0.30)
 
-        self.classifier = GaussianNB()
+        #self.classifier = GaussianNB()
+        self.classifier = RandomForestClassifier()
         self.classifier.fit(self.X_train, self.y_train) 
 
         self.y_pred = self.classifier.predict(self.X_test)
@@ -119,11 +121,11 @@ class Prediction:
         return arr
 
 #####Implementation
-#--------------------predictionModel = Prediction()
+#predictionModel = Prediction()
 
-#--------------------predictionModel.PrintStats()
+#predictionModel.PrintStats()
 #SAMPLE PREDICTION AND INPUT
-#--------------------print(predictionModel.Predict([23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]))
+#print(predictionModel.Predict([23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]))
 
 ######input format 
 #[23, "Male", 1.65, 60, "No", "No", 2, 1, "No", "No", 3, "No", 1, 2, "Sometimes", "Public_Transportation"]
