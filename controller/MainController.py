@@ -101,7 +101,7 @@ if str(sendTestBtn)!="None":
 
 # back button
 if str(backBtn)!="None":
-    redirectURL = "http://localhost/Obeysitey/Obeysitey/Index.html"
+    redirectURL = "http://localhost/Obeysitey/Obeysitey/home.html"
     print ('<script type="text/javascript">window.location ="' + redirectURL + '";</script>')
     print("Petmalu")
 
