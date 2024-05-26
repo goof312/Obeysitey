@@ -26,22 +26,37 @@ class MyTestPageView(object):
 
 
   <body class="bg-secondary-subtle">
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="/Obeysitey/Obeysitey/Index.html"style="color: white; margin: 10px;">Obeysitey</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            
-            <li class="nav-item active">
-              <a class="nav-link" href="" style="Color: white; margin-left: 10%;">Home <span class="sr-only"></span></a>
-            </li>
-          </ul>
+    <nav class="navbar navbar-expand-lg " style="background-color: #0d6efd;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Obeysitey</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" style="decoration: none;">
+                        <form action="MainController.py" method="post" style="margin-bottom: 0;">
+                            <input name="back" type="submit" class="nav-link active text-white" aria-current="page"
+                                value="Home" />
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form action="MainController.py" method="post" style="margin-bottom: 0;">
+                            <input name="TAKE" type="submit" class="nav-link active text-white" aria-current="page"
+                                value="Data" />
+                        </form>
 
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-lg-0 d-flex" action="MainController.py" method="post" style="margin-bottom: 0;">
+                    <input type="submit" class="btn text-white" style="background-color: #418cfd;" name="TAKE"
+                        value="Take The Test" />
+                </form>
+            </div>
         </div>
-      </nav>
+    </nav>
     <div>
         <center>
             <form action ="MainController.py" method ="post">
