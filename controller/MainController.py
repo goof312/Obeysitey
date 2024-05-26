@@ -13,6 +13,7 @@ from utilities import PredictionModel as PM
 from model import MyQueries as MQ
 from view import TestPage as TP
 from view import ResultPage as RP
+from view import DataPage as DP
 
 
 form = cgi.FieldStorage()
@@ -20,6 +21,7 @@ form = cgi.FieldStorage()
 takeTestBtn = form.getvalue("TAKE")
 sendTestBtn = form.getvalue("send")
 backBtn = form.getvalue("back")
+dataBtn = form.getvalue("dataList")
 
 
 
@@ -105,7 +107,12 @@ if str(backBtn)!="None":
     print ('<script type="text/javascript">window.location ="' + redirectURL + '";</script>')
     print("Petmalu")
 
-
+# data button
+if str(dataBtn)!="None":
+    query1 = MQ.GetAllRecords()
+    results= query1.showAll()
+    view1=DP.MyDataPageView(results)
+    view1.viewDataPage()
 
 
 

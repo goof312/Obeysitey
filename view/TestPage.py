@@ -54,7 +54,7 @@ class MyTestPageView(object):
                     </li>
                     <li class="nav-item">
                         <form action="MainController.py" method="post" style="margin-bottom: 0;">
-                            <input name="TAKE" type="submit" class="nav-link active text-white" aria-current="page"
+                            <input name="dataList" type="submit" class="nav-link active text-white" aria-current="page"
                                 value="Data" />
                         </form>
 
@@ -103,7 +103,7 @@ class MyTestPageView(object):
         <br>
         <p class="lead" style="font-size:30px;">Height</p>
         <div>		
-            <input type="number" class="form-control" name="height" placeholder="Type height (in meters)" min="0" max="3">
+            <input type="number" class="form-control" name="height" placeholder="Type height (in meters)" min="0" step=".01">
         </div>
 
 

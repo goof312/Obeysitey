@@ -44,7 +44,7 @@ class MyTestPageView(object):
                     </li>
                     <li class="nav-item">
                         <form action="MainController.py" method="post" style="margin-bottom: 0;">
-                            <input name="TAKE" type="submit" class="nav-link active text-white" aria-current="page"
+                            <input name="dataList" type="submit" class="nav-link active text-white" aria-current="page"
                                 value="Data" />
                         </form>
 

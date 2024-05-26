@@ -35,20 +35,20 @@ class MyDataPageView(object):
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item ">
-                                    <form action="MainController.py" method="post">
+                                    <form action="MainController.py" method="post" style="margin-bottom: 0;">
                                         <input name="back" type="submit" class="nav-link active text-white" aria-current="page"
                                             value="Home" />
                                     </form>
                                 </li>
                                 <li class="nav-item">
-                                    <form action="MainController.py" method="post">
-                                        <input name="TAKE" type="submit" class="nav-link active text-white" aria-current="page"
+                                    <form action="MainController.py" method="post" style="margin-bottom: 0;">
+                                        <input name="dataList" type="submit" class="nav-link active text-white" aria-current="page"
                                             value="Data" />
                                     </form>
 
                                 </li>
                             </ul>
-                            <form class="form-inline mt-2 mt-lg-0 d-flex" action="MainController.py" method="post">
+                            <form class="form-inline mt-2 mt-lg-0 d-flex" action="MainController.py" method="post" style="margin-bottom: 0;">
                                 <input type="submit" class="btn text-white" style="background-color: #418cfd;" name="TAKE"
                                     value="Take The Test" />
                             </form>
