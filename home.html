@@ -22,25 +22,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #f8f9fa;
-            /* Light gray background */
+            /* background-image: url('./resources/dots2.png'); */
         }
 
         .footer {
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #007bff;
-            /* Custom blue color */
+            background-color: #7c82d3;
         }
     </style>
 </head>
 
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #7c82d3;">
+    <nav class="navbar navbar-expand-lg " style="background-color: #0d6efd;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Obeysitey</a>
+            <a class="navbar-brand text-white" href="#">Obeysitey</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -48,18 +46,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <li class="nav-item ">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Data</a>
+                        <a class="nav-link text-white" href="#">Data</a>
                     </li>
                 </ul>
                 <form class="form-inline mt-2 mt-lg-0 d-flex" action="controller/MainController.py" method="post">
-                    <input type="submit" class="btn text-white" style="background-color: #3b46d8;" name="TAKE"
+                    <input type="submit" class="btn text-white" style="background-color: #418cfd;" name="TAKE"
                         value="Take The Test" />
                 </form>
             </div>
@@ -69,20 +64,22 @@
     <div class="d-flex flex-column min-vh-100">
         <!-- Your content goes here -->
 
-        <div class="full-page-section">
-            <div class="container">
-                <h1 class="display-4">Predict Your Obesity Risk</h1>
-                <p class="lead">Use our simple tool to estimate your risk of obesity based on lifestyle factors.</p>
-                <form action="controller/MainController.py" method="post">
-                    <input type="submit" class="btn text-white btn-lg" style="background-color: #7c82d3;" name="TAKE"
-                        value="TAKE THE TEST" />
-                </form>
+        <div class="full-page-section" style="background-color: #c8deff;">
+                <div class="container rounded-5" style="background-color: #ffffff; padding:100px!important;">
+                    <h1 class="display-4">Predict Your Obesity Risk</h1>
+                    <p class="lead">Use our simple tool to estimate your risk of obesity based on lifestyle factors.</p>
+                    <form action="controller/MainController.py" method="post">
+                        <input type="submit" class="btn text-white btn-lg" style="background-color: #418cfd;"
+                            name="TAKE" value="TAKE THE TEST" />
+                    </form>
+                </div>
             </div>
         </div>
 
 
-        <div class="container my-5 text-justify">
-            <h2 class="text-center mb-4">UNDERSTANDING OBESITY</h2>
+        <h2 class="text-center mb-2 mt-5">UNDERSTANDING OBESITY</h2>
+        <div class="container my-5 text-justify p-3 rounded-" style="background-color: #c8deff;">
+
             <p class="mb-5">Obesity is a medical condition characterized by an excessive accumulation of body fat, which
                 presents a
                 risk
@@ -120,7 +117,7 @@
 
         <div class="container my-5 text-center">
             <h2 class="text-center mb-4">See more about our data</h2>
-            <button type="button" class="btn btn-primary">See Data List</button>
+            <button type="button" class="btn btn-primary" style="background-color: #7c82d3;">See Data List</button>
 
         </div>
 
@@ -128,7 +125,7 @@
 
         <!-- Your full-page section and other content -->
 
-        <footer class="footer text-white py-3" style="background-color: #7c82d3;">
+        <footer class="footer text-white py-3" style="background-color: #418cfd;">
             <div class="container">
                 <div class="row">
                     <div class="col">
