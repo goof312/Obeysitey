@@ -47,10 +47,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item ">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        <form action="controller/MainController.py" method="post">
+                            <input name="back" type="submit" class="nav-link active text-white" aria-current="page"
+                                value="Home" />
+                        </form>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Data</a>
+                        <form action="controller/MainController.py" method="post">
+                            <input name="TAKE" type="submit" class="nav-link active text-white" aria-current="page"
+                                value="Data" />
+                        </form>
+
                     </li>
                 </ul>
                 <form class="form-inline mt-2 mt-lg-0 d-flex" action="controller/MainController.py" method="post">
@@ -65,74 +72,74 @@
         <!-- Your content goes here -->
 
         <div class="full-page-section" style="background-color: #c8deff;">
-                <div class="container rounded-5" style="background-color: #ffffff; padding:100px!important;">
-                    <h1 class="display-4">Predict Your Obesity Risk</h1>
-                    <p class="lead">Use our simple tool to estimate your risk of obesity based on lifestyle factors.</p>
-                    <form action="controller/MainController.py" method="post">
-                        <input type="submit" class="btn text-white btn-lg" style="background-color: #418cfd;"
-                            name="TAKE" value="TAKE THE TEST" />
-                    </form>
-                </div>
+            <div class="container rounded-5" style="background-color: #ffffff; padding:100px!important;">
+                <h1 class="display-4">Predict Your Obesity Risk</h1>
+                <p class="lead">Use our simple tool to estimate your risk of obesity based on lifestyle factors.</p>
+                <form action="controller/MainController.py" method="post">
+                    <input type="submit" class="btn text-white btn-lg" style="background-color: #418cfd;" name="TAKE"
+                        value="TAKE THE TEST" />
+                </form>
             </div>
         </div>
+    </div>
 
 
-        <h2 class="text-center mb-2 mt-5">UNDERSTANDING OBESITY</h2>
-        <div class="container my-5 text-justify p-3 rounded-" style="background-color: #c8deff;">
+    <h2 class="text-center mb-2 mt-5">UNDERSTANDING OBESITY</h2>
+    <div class="container my-5 text-justify p-3 rounded-" style="background-color: #c8deff;">
 
-            <p class="mb-5">Obesity is a medical condition characterized by an excessive accumulation of body fat, which
-                presents a
-                risk
-                to health. It is commonly assessed using the Body Mass Index (BMI), where a BMI of 30 or higher is
-                classified
-                as obese. Obesity increases the likelihood of various health problems, including cardiovascular
-                diseases, type
-                2 diabetes, certain types of cancer, and musculoskeletal disorders. It is influenced by a combination of
-                genetic, behavioral, and environmental factors, including diet, physical activity levels, and
-                socio-economic
-                status. Managing obesity often involves lifestyle changes such as diet modification, increased physical
-                activity, behavioral therapy, and, in some cases, medical or surgical interventions.</p>
+        <p class="mb-5">Obesity is a medical condition characterized by an excessive accumulation of body fat, which
+            presents a
+            risk
+            to health. It is commonly assessed using the Body Mass Index (BMI), where a BMI of 30 or higher is
+            classified
+            as obese. Obesity increases the likelihood of various health problems, including cardiovascular
+            diseases, type
+            2 diabetes, certain types of cancer, and musculoskeletal disorders. It is influenced by a combination of
+            genetic, behavioral, and environmental factors, including diet, physical activity levels, and
+            socio-economic
+            status. Managing obesity often involves lifestyle changes such as diet modification, increased physical
+            activity, behavioral therapy, and, in some cases, medical or surgical interventions.</p>
 
-            <p class="mb-5">Overweight and obesity result from an imbalance of energy intake (diet) and energy
-                expenditure (physical
-                activity). In most cases obesity is a multifactorial disease due to obesogenic environments,
-                psycho-social
-                factors and genetic variants. In a subgroup of patients, single major etiological factors can be
-                identified
-                (medications, diseases, immobilization, iatrogenic procedures, monogenic disease/genetic syndrome). The
-                obesogenic environment exacerbating the likelihood of obesity in individuals, populations and in
-                different
-                settings is related to structural factors limiting the availability of healthy sustainable food at
-                locally
-                affordable prices, lack of safe and easy physical mobility into the daily life of all people, and
-                absence of
-                adequate legal and regulatory environment. At the same time, the lack of an effective health system
-                response
-                to identify excess weight gain and fat deposition in their early stages is aggravating the progression
-                to
-                obesity.</p>
-            <p><strong>Learn More About Obesity Risks &amp; Prevention</strong></p>
-        </div>
-
-
-        <div class="container my-5 text-center">
-            <h2 class="text-center mb-4">See more about our data</h2>
-            <button type="button" class="btn btn-primary" style="background-color: #7c82d3;">See Data List</button>
-
-        </div>
+        <p class="mb-5">Overweight and obesity result from an imbalance of energy intake (diet) and energy
+            expenditure (physical
+            activity). In most cases obesity is a multifactorial disease due to obesogenic environments,
+            psycho-social
+            factors and genetic variants. In a subgroup of patients, single major etiological factors can be
+            identified
+            (medications, diseases, immobilization, iatrogenic procedures, monogenic disease/genetic syndrome). The
+            obesogenic environment exacerbating the likelihood of obesity in individuals, populations and in
+            different
+            settings is related to structural factors limiting the availability of healthy sustainable food at
+            locally
+            affordable prices, lack of safe and easy physical mobility into the daily life of all people, and
+            absence of
+            adequate legal and regulatory environment. At the same time, the lack of an effective health system
+            response
+            to identify excess weight gain and fat deposition in their early stages is aggravating the progression
+            to
+            obesity.</p>
+        <p><strong>Learn More About Obesity Risks &amp; Prevention</strong></p>
+    </div>
 
 
+    <div class="container my-5 text-center">
+        <h2 class="text-center mb-4">See more about our data</h2>
+        <button type="button" class="btn btn-primary" style="background-color: #7c82d3;">See Data List</button>
 
-        <!-- Your full-page section and other content -->
+    </div>
 
-        <footer class="footer text-white py-3" style="background-color: #418cfd;">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <p>&copy; 2024 Obeysitey. All rights reserved.</p>
-                    </div>
+
+
+    <!-- Your full-page section and other content -->
+
+    <footer class="footer text-white py-3" style="background-color: #418cfd;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>&copy; 2024 Obeysitey. All rights reserved.</p>
                 </div>
-        </footer>
+            </div>
+    </footer>
     </div>
 
 
