@@ -75,7 +75,7 @@ class Controller():
     def getRecommendation(self, category):
         myrecomendation = MQ.GetMYrecomendation(category)
         results = myrecomendation.getRec()
-        print(results)
+        #print(results)
         return results
         # send sa views
 

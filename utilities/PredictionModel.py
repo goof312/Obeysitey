@@ -81,11 +81,11 @@ class Prediction:
     Void method: Prints Confusion matrix, classification, and accuracy
     '''
     def PrintStats(self): 
-        print("Confusion Matrix: ")
-        print(self.result)
-        result1 = classification_report(self.y_test, self.y_pred)
-        print("Classification Report: ",)
-        print (result1)
+        # print("Confusion Matrix: ")
+        # print(self.result)
+        # result1 = classification_report(self.y_test, self.y_pred)
+        # print("Classification Report: ",)
+        # print (result1)
         result2 = accuracy_score(self.y_test,self.y_pred)
         print("Accuracy: ",result2)
         return
@@ -100,6 +100,7 @@ class Prediction:
         
         arrayVals = self.__convertInputs(arrayVals)
         print(" ".join(map(str, arrayVals)))
+        self.PrintStats()
         print("<script> console.log('" + "magppppppredict" + "'); </script>")
         test1 = self.classifier.predict([arrayVals])
         print("<script> console.log('" + "ayaw mo predict?" + "'); </script>")

@@ -96,21 +96,21 @@ class MyTestPageView(object):
         <br>
         <p class="lead" style="font-size:30px;">Age</p>
         <div class="col-xs-2">
-            <input type="number" class="form-control" name="age" placeholder="Type Age" min="0" max="100">
+            <input type="number" class="form-control" name="age" placeholder="Type Age" min="0" max="100" required>
         </div>
 
 
         <br>
         <p class="lead" style="font-size:30px;">Height</p>
         <div>		
-            <input type="number" class="form-control" name="height" placeholder="Type height (in meters)" min="0" step=".01">
+            <input type="number" step="any" class="form-control" name="height" placeholder="Type height (in meters)" min="0" max="3" required>
         </div>
 
 
         <br>
         <p class="lead" style="font-size:30px;">Weight</p>
         <div>		
-            <input type="text" class="form-control" name="weight" placeholder="Type Weight (in kg)" min="0" max="700">
+            <input type="text" class="form-control" name="weight" placeholder="Type Weight (in kg)" min="0" max="700" required>
         </div>
 
 
