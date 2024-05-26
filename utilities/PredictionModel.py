@@ -87,7 +87,7 @@ class Prediction:
         # print("Classification Report: ",)
         # print (result1)
         result2 = accuracy_score(self.y_test,self.y_pred)
-        print("Accuracy: ",result2)
+        #print("Accuracy: ",result2)
         return
 
     '''
@@ -99,7 +99,7 @@ class Prediction:
     def Predict(self, arrayVals):
         
         arrayVals = self.__convertInputs(arrayVals)
-        print(" ".join(map(str, arrayVals)))
+        #print(" ".join(map(str, arrayVals)))
         self.PrintStats()
         print("<script> console.log('" + "magppppppredict" + "'); </script>")
         test1 = self.classifier.predict([arrayVals])
@@ -110,7 +110,7 @@ class Prediction:
     def __convertInputs(self, arr):
         indGender = 1; indCALC = 4; indFAVC = 5; indSCC = 8; indSmoke = 9; indHistory = 11; indCAEC = 14; indTrans = 15
         arr[indGender] = InputEnums.Gender[arr[indGender].lower()]
-        print(arr[indGender])
+        #print(arr[indGender])
         arr[indCALC] = InputEnums.CALC[arr[indCALC].lower()]
         arr[indFAVC] = InputEnums.YesNo[arr[indFAVC].lower()]
         arr[indSCC] = InputEnums.YesNo[arr[indSCC].lower()]

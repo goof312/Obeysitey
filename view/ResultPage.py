@@ -1,21 +1,23 @@
 #!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
-#C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+# C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
 
 import cgi
 
+
 class MyTestPageView(object):
     def __init__(self, recomendation):
         self.recomendation = recomendation
-     
+
     def viewResultPage(self):
-        print("""
+        print(
+            """
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Result Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
 <style type="text/css">
@@ -66,11 +68,15 @@ class MyTestPageView(object):
             <blockquote class="blockquote">
             <p>
                   <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
-                    NObeyesdad: Type of obesity - insufficient_weight, normal_weight, overweight-level_i, overweight-level_ii, obesity_type_i, obesity_type_ii, obesity_type_iii
+                    
                       
                       """
-                      + self.recomendation + 
-                      """
+        )
+
+        print(self.recomendation)
+           
+        print(
+            """
                   </div>
             </p>
             <br>
@@ -94,4 +100,5 @@ class MyTestPageView(object):
 
 
 
-""")
+"""
+        )

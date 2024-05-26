@@ -98,7 +98,10 @@ if str(sendTestBtn)!="None":
     print('<script> console.log("Insert"); </script>')
     cont.insertRecord(prediction)
 
-    viewResult = RP.MyTestPageView(str(recommendation))
+    line = ("".join(map(str, recommendation)))
+    line = line.replace(r"\r\n", "")
+    line = line.replace(r"\xf0\x9f\x8e\x89", "")
+    viewResult = RP.MyTestPageView(line)
     viewResult.viewResultPage()
 
 # back button
