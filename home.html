@@ -71,7 +71,7 @@
     <div class="d-flex flex-column min-vh-100">
         <!-- Your content goes here -->
 
-        <div class="full-page-section bg-info bg-opacity-50" >
+        <div class="full-page-section bg-info bg-opacity-50">
             <div class="container rounded-5" style="background-color: #ffffff; padding:100px!important;">
                 <h1 class="display-4">Predict Your Obesity Risk</h1>
                 <p class="lead">Use our simple tool to estimate your risk of obesity based on lifestyle factors.</p>
@@ -123,8 +123,10 @@
 
     <div class="container my-5 text-center">
         <h2 class="text-center mb-4">See more about our data</h2>
-        <button type="button" class="btn btn-primary" style="background-color: #418cfd;">See Data List</button>
-
+        <form action="controller/MainController.py" method="post">
+            <input type="submit" class="btn text-white btn-lg" style="background-color: #418cfd;" name="dataList"
+                value="See Data List" />
+        </form>
     </div>
 
 
