@@ -1,4 +1,5 @@
-#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
+#C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
 
 
@@ -126,7 +127,17 @@ class GetMYrecomendation():
             print("Error:", e)
             return None
 
-
-
+class GetAllRecords():
+    def showAll(self):
+        try:
+            conn = MyConnection("localhost", "root", "", "obesityrecords")
+            mydb = conn.connect()
+            mycursor = mydb.cursor(dictionary=True)
+            mycursor.execute("SELECT * FROM records")
+            myresult = mycursor.fetchall()
+            return myresult
+        except mysql.connector.Error as e:
+            print("Error:", e)
+            return None
 
 

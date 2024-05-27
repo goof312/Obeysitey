@@ -1,13 +1,16 @@
-#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
+# C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 
 print('<script> console.log("start"); </script>')
 
 import cgi
 
+
 class MyTestPageView(object):
-     
+
     def viewAddRecordTestpage(self):
-        print("""
+        print(
+            """
 
 <!doctype html>
 <html lang="en">
@@ -32,24 +35,40 @@ class MyTestPageView(object):
 </head>
 
 
-<body class="bg-secondary-subtle">
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="#"style="color: white; margin: 10px;">Obeysitey</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+<body class="" style="background-color: #ffffff;">
+    <nav class="navbar navbar-expand-lg " style="background-color: #0d6efd;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Obeysitey</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/Obeysitey/Obeysitey/Index.html" style="Color: white; margin-left: 10%;">Home <span class="sr-only"></span></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" style="decoration: none;">
+                        <form action="MainController.py" method="post" style="margin-bottom: 0;">
+                            <input name="back" type="submit" class="nav-link active text-white" aria-current="page"
+                                value="Home" />
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form action="MainController.py" method="post" style="margin-bottom: 0;">
+                            <input name="dataList" type="submit" class="nav-link active text-white" aria-current="page"
+                                value="Data" />
+                        </form>
+
                     </li>
                 </ul>
-
+                <form class="form-inline mt-2 mt-lg-0 d-flex" action="MainController.py" method="post" style="margin-bottom: 0;">
+                    <input type="submit" class="btn text-white" style="background-color: #418cfd;" name="TAKE"
+                        value="Take The Test" />
+                </form>
             </div>
+        </div>
     </nav>
               
-    <div class="container d-flex-justify-content-center">
+    <div class="container d-flex-justify-content-center" >
         <center>
             <form action ="/Obeysitey/Obeysitey/controller/MainController.py" method ="post">
             <br>
@@ -77,21 +96,21 @@ class MyTestPageView(object):
         <br>
         <p class="lead" style="font-size:30px;">Age</p>
         <div class="col-xs-2">
-            <input type="number" class="form-control" name="age" placeholder="Type Age" min="0" max="100">
+            <input type="number" class="form-control" name="age" placeholder="Type Age" min="0" max="100" required>
         </div>
 
 
         <br>
         <p class="lead" style="font-size:30px;">Height</p>
         <div>		
-            <input type="number" class="form-control" name="height" placeholder="Type height (in meters)" min="0" max="3">
+            <input type="number" step="any" class="form-control" name="height" placeholder="Type height (in meters)" min="0" max="3" required>
         </div>
 
 
         <br>
         <p class="lead" style="font-size:30px;">Weight</p>
         <div>		
-            <input type="text" class="form-control" name="weight" placeholder="Type Weight (in kg)" min="0" max="700">
+            <input type="text" class="form-control" name="weight" placeholder="Type Weight (in kg)" min="0" max="700" required>
         </div>
 
 
@@ -326,4 +345,5 @@ class MyTestPageView(object):
 </html>
 
 
-""")
+"""
+        )

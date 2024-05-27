@@ -1,4 +1,6 @@
-#!C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
+
+#C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 print("Content-Type: text/html")
 print()     
 
@@ -11,6 +13,7 @@ from utilities import PredictionModel as PM
 from model import MyQueries as MQ
 from view import TestPage as TP
 from view import ResultPage as RP
+from view import DataPage as DP
 
 
 form = cgi.FieldStorage()
@@ -18,6 +21,7 @@ form = cgi.FieldStorage()
 takeTestBtn = form.getvalue("TAKE")
 sendTestBtn = form.getvalue("send")
 backBtn = form.getvalue("back")
+dataBtn = form.getvalue("dataList")
 
 
 
@@ -71,7 +75,7 @@ class Controller():
     def getRecommendation(self, category):
         myrecomendation = MQ.GetMYrecomendation(category)
         results = myrecomendation.getRec()
-        print(results)
+        #print(results)
         return results
         # send sa views
 
@@ -94,16 +98,25 @@ if str(sendTestBtn)!="None":
     print('<script> console.log("Insert"); </script>')
     cont.insertRecord(prediction)
 
-    viewResult = RP.MyTestPageView(str(recommendation))
+    line = ("".join(map(str, recommendation)))
+    line = line.replace(r"\r\n", "")
+    line = line.replace(r"\xf0\x9f\x8e\x89", "")
+    line = line.replace(r"\xe2\x89\xa5", "")
+    viewResult = RP.MyTestPageView(line)
     viewResult.viewResultPage()
 
 # back button
 if str(backBtn)!="None":
-    redirectURL = "http://localhost/Obeysitey/Obeysitey/Index.html"
+    redirectURL = "http://localhost/Obeysitey/Obeysitey/home.html"
     print ('<script type="text/javascript">window.location ="' + redirectURL + '";</script>')
     print("Petmalu")
 
-
+# data button
+if str(dataBtn)!="None":
+    query1 = MQ.GetAllRecords()
+    results= query1.showAll()
+    view1=DP.MyDataPageView(results)
+    view1.viewDataPage()
 
 
 
