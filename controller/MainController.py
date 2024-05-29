@@ -14,6 +14,7 @@ from model import MyQueries as MQ
 from view import TestPage as TP
 from view import ResultPage as RP
 from view import DataPage as DP
+from view import DataSetPage as DSP
 
 
 form = cgi.FieldStorage()
@@ -22,7 +23,7 @@ takeTestBtn = form.getvalue("TAKE")
 sendTestBtn = form.getvalue("send")
 backBtn = form.getvalue("back")
 dataBtn = form.getvalue("dataList")
-
+datasetBtn = form.getvalue("dataset")
 
 
 class Controller():
@@ -118,6 +119,9 @@ if str(dataBtn)!="None":
     view1=DP.MyDataPageView(results)
     view1.viewDataPage()
 
+if str(datasetBtn) != "None":
+    view1=DSP.MyDataSetPageView()
+    view1.viewDataPage()
 
 
 
