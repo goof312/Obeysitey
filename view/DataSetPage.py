@@ -48,7 +48,7 @@ class MyDataSetPageView(object):
 
                                 </li>
                                 <li class="nav-item">
-                        <form action="controller/MainController.py" method="post" style="margin-bottom: 0;">
+                        <form action="MainController.py" method="post" style="margin-bottom: 0;">
                             <input name="dataset" type="submit" class="nav-link active text-white" aria-current="page"
                                 value="About" />
                         </form>
