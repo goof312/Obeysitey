@@ -51,6 +51,13 @@ class MyTestPageView(object):
                         </form>
 
                     </li>
+                    <li class="nav-item">
+                        <form action="MainController.py" method="post" style="margin-bottom: 0;">
+                            <input name="dataset" type="submit" class="nav-link active text-white" aria-current="page"
+                                value="About" />
+                        </form>
+
+                    </li>
                 </ul>
                 <form class="form-inline mt-2 mt-lg-0 d-flex" action="MainController.py" method="post" style="margin-bottom: 0;">
                     <input type="submit" class="btn text-white" style="background-color: #418cfd;" name="TAKE"

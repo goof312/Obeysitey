@@ -47,6 +47,13 @@ class MyDataPageView(object):
                                     </form>
 
                                 </li>
+                                <li class="nav-item">
+                        <form action="MainController.py" method="post" style="margin-bottom: 0;">
+                            <input name="dataset" type="submit" class="nav-link active text-white" aria-current="page"
+                                value="About" />
+                        </form>
+
+                    </li>
                             </ul>
                             <form class="form-inline mt-2 mt-lg-0 d-flex" action="MainController.py" method="post" style="margin-bottom: 0;">
                                 <input type="submit" class="btn text-white" style="background-color: #418cfd;" name="TAKE"
@@ -82,32 +89,32 @@ class MyDataPageView(object):
                             </tr>
                         </thead>
                         <tbody>
-                        """)
-                        
-                        
+                        """
+        )
+
         for row in self.data:
             print("<tr>")
-            print("<th scope='row'>", row["id"],"</th>")
-            print("<td>" , row["age"], "</td>")
-            print("<td>" ,row["gender"], "</td>")
-            print("<td>" ,row["height"], "</td>")
-            print("<td>" ,row["weight"], "</td>")
-            print("<td>" ,row["calc"], "</td>")
-            print("<td>" ,row["favc"], "</td>")
-            print("<td>" , row["fcvc"], "</td>")
-            print("<td>" ,row["ncp"], "</td>")
-            print("<td>" ,row["scc"], "</td>")
-            print("<td>" ,row["smoke"], "</td>")
-            print("<td>" ,row["ch2o"], "</td>")
-            print("<td>" ,row["family_history_with_overweight"], "</td>")
-            print("<td>" , row["faf"], "</td>")
-            print("<td>" ,row["tue"], "</td>")
-            print("<td>" ,row["caec"], "</td>")
-            print("<td>" ,row["mtrans"], "</td>")
-            print("<td>" ,row["NObeyesdad"], "</td>")
+            print("<th scope='row'>", row["id"], "</th>")
+            print("<td>", row["age"], "</td>")
+            print("<td>", row["gender"], "</td>")
+            print("<td>", row["height"], "</td>")
+            print("<td>", row["weight"], "</td>")
+            print("<td>", row["calc"], "</td>")
+            print("<td>", row["favc"], "</td>")
+            print("<td>", row["fcvc"], "</td>")
+            print("<td>", row["ncp"], "</td>")
+            print("<td>", row["scc"], "</td>")
+            print("<td>", row["smoke"], "</td>")
+            print("<td>", row["ch2o"], "</td>")
+            print("<td>", row["family_history_with_overweight"], "</td>")
+            print("<td>", row["faf"], "</td>")
+            print("<td>", row["tue"], "</td>")
+            print("<td>", row["caec"], "</td>")
+            print("<td>", row["mtrans"], "</td>")
+            print("<td>", row["NObeyesdad"], "</td>")
             print("</tr>")
         print(
-                    """
+            """
                     </tbody>
                 </table>
             </div>
@@ -115,4 +122,3 @@ class MyDataPageView(object):
         </html>
         """
         )
-    
