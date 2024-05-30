@@ -1,5 +1,5 @@
 #!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
-
+#"C:\Users\MateBook D15\AppData\Local\Programs\Python\Python311\python"
 #C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
 print("Content-Type: text/html")
 print()     
