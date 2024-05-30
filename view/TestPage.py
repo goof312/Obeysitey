@@ -1,5 +1,4 @@
-#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
-# C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+#!C:\Users\User\AppData\Local\Programs\Python\Python310\python
 
 print('<script> console.log("start"); </script>')
 

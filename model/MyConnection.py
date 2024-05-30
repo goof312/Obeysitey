@@ -1,5 +1,4 @@
-#!C:\Users\jolay\AppData\Local\Programs\Python\Python312\python
-#C:\Users\jetje\AppData\Local\Programs\Python\Python311\python
+#!C:\Users\User\AppData\Local\Programs\Python\Python310\python
 
 
 
@@ -10,7 +9,7 @@ class MyConnection():
         def __init__(self, host, user, pwd,dbase):    
                 self.host = host
                 self.user = user
-                self.port = 3306
+                self.port = 3307
                 self.pwd = pwd
                 self.dbase = dbase
                 
