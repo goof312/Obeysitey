@@ -5,11 +5,12 @@
 import cgi
 
 
-class NavbarView(object):
+class MyNavbarView:
     def __init__(self):
+        print('<script> console.log("is HERERE"); </script>')
         return
 
-    def NavBarView(self):
+    def NavBar(self):
         return """
                 <nav class="navbar navbar-expand-lg " style="background-color: #0d6efd;">
                     <div class="container-fluid">

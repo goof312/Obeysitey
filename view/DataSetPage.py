@@ -3,19 +3,21 @@
 
 
 import cgi
-import NavBarView as nav
+from view import NavBarView as nbv
 
 
 class MyDataSetPageView(object):
     nv = ""
 
     def __init__(self):
-        self.nv = nav()
+        print("<script> console.log('is here'); </script>")
+        self.nv = nbv.MyNavbarView()
+        
+        print("<script> console.log('is back here'); </script>")
         return
 
     def viewDataPage(self):
-        print(
-            """
+        sb = """
             <!DOCTYPE html>
             <html lang="en">
 
@@ -28,12 +30,7 @@ class MyDataSetPageView(object):
             </head>
 
             <body>
-            """
-        )
-        print(self.nv.NavBarView())
-
-        print(
-            """
+            {}
                 <div class="container mt-5 mb-5">
 
                 <h1 class="display-5 text-center mt-5">Obesity</h1>
@@ -76,5 +73,6 @@ Source: <a href="https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-level
                 </div>
         </body>
         </html>
-        """
-        )
+        """.format(self.nv.NavBar())
+        
+        print(sb)
