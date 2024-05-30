@@ -104,6 +104,7 @@ if str(sendTestBtn)!="None":
     line = line.replace(r"\xf0\x9f\x8e\x89", "")
     line = line.replace(r"\xe2\x89\xa5", "")
     line = line.replace("\\'", "'")
+    line = line.replace("b'", "")
     
     viewResult = RP.MyTestPageView(line)
     viewResult.viewResultPage()
