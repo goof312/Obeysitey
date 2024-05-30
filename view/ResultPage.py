@@ -37,10 +37,10 @@ class MyTestPageView(object):
                         <form action ="MainController.py" method ="post">
                         <br>
                         <h1>YOUR RESULT</h1>
-                            
+                    </center>
                         <blockquote class="blockquote">
                         <p>
-                            <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+                            <div class="p-3 bg-info bg-opacity-10 border border-info rounded ms-5 me-5 ps-5 pe-5">
                                 
                       
                       """
@@ -64,7 +64,7 @@ class MyTestPageView(object):
             <input type="submit" class="btn btn-primary btn-lg" name="back" value="BACK HOME">
             <input type ="submit" class="btn btn-primary btn-lg" name ="TAKE" value = "TEST AGAIN"/>
             </form>
-            </center>
+            
     </div>
 
   </body>
